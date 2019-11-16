@@ -1,0 +1,28 @@
+// Placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// Reset button styles
+@mixin buttonReset {
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+}
