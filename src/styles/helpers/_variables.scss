@@ -1,44 +1,44 @@
 // FONT
-$mainFont: "Roboto", sans-serif;
+$mainFont                     : "Roboto", sans-serif;
 
 // Color
-$mainFontColor: #101010;
+$mainFontColor                : #101010;
 
 // Size
-$mainFontSize: 18px;
-$mainFontWeight: 400;
-$mainLineHeight: 1.4em;
+$mainFontSize                 : 16px;
+$mainFontWeight               : 400;
+$mainLineHeight               : 150%;
 
 
 
 // MEDIA
-$desktopWidth: 1280px;
-$smDesktopWidth: 980px;
-$tableWidth: 768px;
-$phoneWidth: 480px;
-$smPhoneWidth: 320px;
+$desktopWidth                 : 1200px;
+$smDesktopWidth               :  992px;
+$tableWidth                   :  768px;
+$phoneWidth                   :  480px;
+$smPhoneWidth                 :  320px;
 
 
 
 // COLOR
 
 // Main color
-$defaultColor: #ffffff;
-$primaryColor: #444ce0;
-$successColor: #26de81;
-$dangerColor: #fc5c65;
-$warningColor: #fed330;
-$lightColor: #999999;
-$purpleColor: #8854d0;
+$defaultColor                 : #ffffff;
+$primaryColor                 : #444ce0;
+$successColor                 : #26de81;
+$dangerColor                  : #fc5c65;
+$warningColor                 : #fed330;
+$lightColor                   : #999999;
+$purpleColor                  : #8854d0;
 
 // Neutral Color
-$neutralPrimary: #303133;
-$neutralRegular: #606266;
-$neutralSecondary: #909399;
-$neutralPlaceholder: #c0c4cc;
+$neutralPrimary               : #303133;
+$neutralRegular               : #606266;
+$neutralSecondary             : #909399;
+$neutralPlaceholder           : #c0c4cc;
 
 // Border Color
-$borderBase: #dcdfe6;
-$borderLight: #e4e7ed;
-$borderLighter: #ebeef5;
-$borderLightex: #f2f6fc;
+$borderBase                   : #dcdfe6;
+$borderLight                  : #e4e7ed;
+$borderLighter                : #ebeef5;
+$borderLightex                : #f2f6fc;

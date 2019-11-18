@@ -11,7 +11,7 @@
 node_modules
 
 # Dist & test
-test
+*test*
 dist
 
 # BD, logs

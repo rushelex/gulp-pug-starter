@@ -1,0 +1,22 @@
+mixin form(title, typeForm, inputs, footer, checkbox, button)
+    .form
+        form.form__wrapper
+            .title #{title}
+            .form__content
+                -if (typeForm == 'form')
+                    -for (var i = 0; i < inputs.length; i++)
+                        - if (inputs[i].type != 'textarea')
+                            +input(inputs[i].label,inputs[i].type, inputs[i].name)
+                        - else
+                            .custom-textarea
+                                label.custom-textarea__label #{inputs[i].label}
+                                textarea(name=inputs[i].name).custom-textarea__area
+                -else
+                    p.text-larger #{inputs}
+                -if (checkbox)
+                    +checkbox(checkbox.text, checkbox.name, checkbox.link)
+                button(type="submit").button.button--action #{button}
+        if(footer.p)
+            .form__footer
+                p #{footer.p}
+                button(class="button link " + footer.name + "") #{footer.button}

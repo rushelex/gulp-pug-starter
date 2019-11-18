@@ -2,13 +2,48 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
-	- const description = "Starter template on gulp and webpack"
+    - const title = "gulp-pug-starter"
 
 block content
-	main
-		h1 Hello, world!
+    include ../blocks/modules/header/header
+    main
+        h1 Hello, world!
+        include ../blocks/modules/form/form
+        +form('Заполните форму','form',[
+            {
+                'label' : 'Имя',
+                'name' : 'name',
+                'type' : 'text',
+            },
+            {
+                'label' : 'Телефон',
+                'name' : 'phone',
+                'type' : 'tel',
+            },
+            {
+                'label' : 'E-mail',
+                'name' : 'email',
+                'type' : 'email',
+            },
+            {
+                'label' : 'Сообщение',
+                'name' : 'message',
+                'type' : 'textarea',
+            },],
+            {},
+            {
+                'text' : 'Согласен на обработку персональных данных.',
+                'link' : {
+                    'title' : 'Политика конфиденциальности',
+                    'href' : '/politic'
+                },
+                'name' : 'politic'
+            },
+            'Отправить'
+        )
+    include ../blocks/modules/footer/footer
+    include ../blocks/modules/popup/popup
 
 block scripts
-	script(src="js/vendor.js")
-	script(src="js/main.js")
+    script(src="js/vendor.js")
+    script(src="js/main.js")

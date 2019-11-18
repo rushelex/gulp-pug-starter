@@ -1,1 +1,1 @@
-// empty
+/* eslint-disable import/no-unresolved */

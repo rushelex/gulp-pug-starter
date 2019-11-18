@@ -1,0 +1,53 @@
+.form {
+    border: 2px solid $grey;
+    background: #ffffff;
+
+    &__wrapper {
+        padding: 60px 50px 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media only screen and (max-width: 425px) {
+            padding: 40px 20px 40px;
+        }
+
+        .title {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .custom-input {
+            padding-bottom: 20px;
+        }
+
+        .custom-checkbox {
+            padding-top: 30px;
+        }
+
+        .button {
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+        }
+    }
+
+    &__footer {
+        padding-bottom: 70px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        > * {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+}

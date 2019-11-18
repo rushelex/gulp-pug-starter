@@ -8,6 +8,7 @@
 * используется [Webpack](https://webpack.js.org/) для сборки JavaScript-модулей
 * используется CSS-сетка [smart-grid](https://github.com/dmitry-lavrik/smart-grid) на основе Bootstrap для быстрой адаптивной вёрстки
 * используется жёсткий кодгайд
+* используется проверка на ошибки и форматирование SCSS- и JS-файлов перед коммитом
 
 ## Установка
 * установите [NodeJS](https://nodejs.org/en/) (если требуется) и [Yarn](https://yarnpkg.com/en/docs/install)

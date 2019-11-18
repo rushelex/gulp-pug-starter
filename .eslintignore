@@ -1,0 +1,9 @@
+/node_modules/**
+/gulp-tasks/**
+.babelrc.js
+.bemrc.js
+.csscomb.json
+.eslintrc.json
+package.json
+gulpfile.babel.js
+webpack.config.js

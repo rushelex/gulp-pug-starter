@@ -1,0 +1,19 @@
+mixin page-title-bg(title, path, image)
+    .page-title.page-title--with-bg(style="background-image: url('./img/breadcrumbs/" + image + "')")
+        .page-title__container.container
+            .page-title__wrapper.row.row--center
+                .page-title__breadcrumbs.col-12
+                    include ../breadcrumbs/breadcrumbs
+                    +breadcrumbs(path)
+                .page-title__content.col-md-8
+                    h1.title !{title}
+mixin page-title(title, path, hideTitle)
+        .page-title
+            .page-title__container.container
+                .page-title__wrapper.row
+                    .page-title__breadcrumbs.col-12
+                        include ../breadcrumbs/breadcrumbs
+                        +breadcrumbs(path)
+                    -if (!hideTitle)
+                        .page-title__content.col-12
+                            h1.title !{title}

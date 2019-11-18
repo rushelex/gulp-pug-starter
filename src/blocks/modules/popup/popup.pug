@@ -1,0 +1,42 @@
+.popup.popup--user
+    .popup__wrapper
+        button.popup__close.button.popup__close-user
+            +icon('close', 'close-mode')
+        include ../form/form
+        +form('Вход','form',[
+            {
+                'label' : 'Логин',
+                'name' : 'login',
+                'type' : 'text',
+            },
+            {
+                'label' : 'Пароль',
+                'name' : 'password',
+                'type' : 'password',
+            }],
+            {
+                'p' : 'Если у вас нет аккаунта вы можете' ,
+                'button' : 'Зарегистрироваться',
+                'name' : 'button-user-register',
+            },
+            {
+                'text' : 'Запомнить на этом компьютере',
+                'name' : 'remember'
+            },
+            'Войти'
+        )
+.popup.popup--user-register
+    .popup__wrapper
+        button.popup__close.button.popup__close-user
+            +icon('close', '')
+        include ../form/form
+        +form('Регистрация','form-alert','Для регистрации обратитесь к вашему менеджеру по телефону +7 (495) 795-16-80',
+            {
+                'p' : 'Если у вас уже есть аккаунта' ,
+                'button' : 'Войти',
+                'name' : 'button-user',
+            },
+            '',
+            'Хорошо'
+        )
+.overlay
