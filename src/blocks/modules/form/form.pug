@@ -5,18 +5,21 @@ mixin form(title, typeForm, inputs, footer, checkbox, button)
             .form__content
                 -if (typeForm == 'form')
                     -for (var i = 0; i < inputs.length; i++)
-                        - if (inputs[i].type != 'textarea')
-                            +input(inputs[i].label,inputs[i].type, inputs[i].name)
+                        - if (inputs[i].type == 'file')
+                            +file(inputs[i].label, inputs[i].name, inputs[i].id)
+                        - else if (inputs[i].type == 'textarea')
+                            +textarea(inputs[i].label, inputs[i].name, inputs[i].id, inputs[i].placeholder, inputs[i].require)
+                        - else if (inputs[i].type == 'radio')
+                            +radio(inputs[i].label, inputs[i].name, inputs[i].id, inputs[i].value, inputs[i].checked, inputs[i].icon)
                         - else
-                            .custom-textarea
-                                label.custom-textarea__label #{inputs[i].label}
-                                textarea(name=inputs[i].name).custom-textarea__area
+                            +input(inputs[i].label, inputs[i].type, inputs[i].name, inputs[i].id, inputs[i].value, inputs[i].placeholder, inputs[i].require, inputs[i].alert)
                 -else
                     p.text-larger #{inputs}
                 -if (checkbox)
-                    +checkbox(checkbox.text, checkbox.name, checkbox.link)
+                    +checkbox(checkbox.text, checkbox.name, checkbox.id, checkbox.link)
                 button(type="submit").button.button--action #{button}
         if(footer.p)
             .form__footer
                 p #{footer.p}
-                button(class="button link " + footer.name + "") #{footer.button}
+                button(class=`link ${footer.name}`)
+                    span #{footer.button}

@@ -14,7 +14,7 @@
             justify-content: center;
 
             &:not(:first-child) {
-                &:before {
+                &::before {
                     content: "—";
                     margin-right: 12px;
                     margin-left: 12px;

@@ -7,20 +7,65 @@ mixin icon(name, mod)
         svg(class=`icon icon-${name}`)
             use(xlink:href=`./img/svg/sprite.svg#${name}`)
 
-mixin input(label, type, name, placeholder)
+mixin input(label, type, name, id, value, placeholder, require, alert)
     .custom-input
-        label.custom-input__label #{label}
-        input(type=type, name=name, placeholder=placeholder, required).custom-input__input
+        - if (require == '' || require == 'false')
+            label(for=`${name}-${id}`).custom-input__label #{label}
+            input(type=type, name=name, id=`${name}-${id}`, value=value, placeholder=placeholder).custom-input__input
+        - else
+            label(for=`${name}-${id}`).custom-input__label.custom-input__label--require #{label}
+                span *
+            input(require, type=type, name=name, id=`${name}-${id}`, value=value, placeholder=placeholder).custom-input__input
+        .custom-input__alert
+            p #{alert}
 
-mixin checkbox(text, name, link)
+mixin checkbox(text, name, id, link)
     .custom-checkbox
-        input(type="checkbox", id=name, name=name)
-        label(for=name)
+        input(type="checkbox", name=name, id=`${name}-${id}`).custom-checkbox__input
+        label(for=`${name}-${id}`).custom-checkbox__label
             span.custom-checkbox__toggle
                 <svg height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 6L5 10L11.5 1" stroke="#1E428F" stroke-width="2"/>
+                    <path d="M1 6L5 10L11.5 1" stroke="#FB3232" stroke-width="2"/>
                 </svg>
-            span.custom-checkbox__text
-                | #{text}
+            span.custom-checkbox__text #{text}
                 if link
-                    a(href=link.href) #{link.title}
+                    a(href=link.href).link
+                        span #{link.title}
+
+mixin radio(label, name, id, value, checked, icon)
+    .custom-radio
+        - icon = icon || ''
+        - if (icon != '')
+            - checked = checked || ''
+            - if (checked != 'true')
+                input(type='radio', name=name, id=`${name}-${id}`, value=value).custom-radio__input
+            - else
+                input(checked, type='radio', name=name, id=`${name}-${id}`, value=value).custom-radio__input
+            label(for=`${name}-${id}`).custom-radio__label.custom-radio__label--iconic
+                +icon(icon)
+                span #{label}
+        - else
+            - checked = checked || ''
+            - if (checked != 'true')
+                input(type='radio', name=name, id=`${name}-${id}`, value=value).custom-radio__input
+            - else
+                input(checked, type='radio', name=name, id=`${name}-${id}`, value=value).custom-radio__input
+            label(for=`${name}-${id}`).custom-radio__label
+                span #{label}
+
+mixin textarea(label, name, id, placeholder, require)
+    .custom-textarea
+        - if (require == '' || require == 'false')
+            label.custom-textarea__label #{label}
+            textarea(name=name, id=`${name}-${id}`,placeholder=placeholder).custom-textarea__area
+        - else
+            label.custom-textarea__label.custom-textarea__label--require #{label}
+                span *
+            textarea(require, name=name, id=`${name}-${id}`, value=value, placeholder=placeholder).custom-textarea__area
+
+mixin file(label, name, id)
+    .custom-inputfile
+        input(type="file", id=`${name}-${id}`, data-multiple-caption="Выбрано файлов: {{count}}", multiple).custom-inputfile__input
+        label(for=`${name}-${id}`).custom-inputfile__label
+            +icon('file')
+            span #{label}

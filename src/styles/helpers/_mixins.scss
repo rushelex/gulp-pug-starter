@@ -1,25 +1,53 @@
-// Placeholder
 @mixin placeholder {
     &::-webkit-input-placeholder {
         @content;
     }
+
     &::-moz-placeholder {
         @content;
     }
+
     &:-moz-placeholder {
         @content;
     }
+
     &:-ms-input-placeholder {
         @content;
     }
 }
 
-// Reset button styles
 @mixin buttonReset {
+    position: relative;
+    font: inherit;
     padding: 0;
     cursor: pointer;
     color: inherit;
     border: none;
     background-color: transparent;
-    font: inherit;
+}
+
+@mixin linkUnderline {
+    > span {
+        position: relative;
+        width: 100%;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            content: "";
+            transition: 0.15s;
+            background-color: $colorMain;
+        }
+    }
+
+    &:hover {
+        > span {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
 }

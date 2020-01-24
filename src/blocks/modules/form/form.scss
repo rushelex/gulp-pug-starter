@@ -1,16 +1,12 @@
 .form {
-    border: 2px solid $grey;
-    background: #ffffff;
+    border: 2px solid $colorLight;
+    background: #fff;
 
     &__wrapper {
         padding: 60px 50px 50px;
         display: flex;
         align-items: center;
         flex-direction: column;
-
-        @media only screen and (max-width: 425px) {
-            padding: 40px 20px 40px;
-        }
 
         .title {
             margin-bottom: 30px;
@@ -48,6 +44,15 @@
         > * {
             margin-right: 10px;
             margin-left: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .form {
+        &__wrapper {
+            padding-right: 20px;
+            padding-left: 20px;
         }
     }
 }

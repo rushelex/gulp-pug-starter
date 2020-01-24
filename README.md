@@ -56,7 +56,6 @@ gulp-pug-starter
     * ```.stylelintrc``` — настройки Stylelint
     * ```.stylelintignore``` — запрет на отслеживание файлов Stylelint'ом
     * ```.prettierrc``` — настройки Prettier
-    * ```.csscomb.json``` — настройки CSScomb
     * ```.gitignore``` — запрет на отслеживание файлов Git'ом
     * ```gulpfile.babel.js``` — настройки Gulp
     * ```webpack.config.js``` — настройки Webpack
@@ -74,9 +73,9 @@ gulp-pug-starter
 * Папка ```gulp-tasks``` – папка с Gulp-тасками
 
 ## Команды
-* ```yarn run lint:style``` – проверить SCSS-файлы. Для VSCode необходимо установить [плагин](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint). Для WebStorm
+* ```yarn run lint:style``` – проверить SCSS-файлы. Для VSCode существует [плагин](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint), подсказывающий ошибки в реальном времени. Для WebStorm
 или PHPStorm необходимо включить Stylelint в ```Languages & Frameworks –> Style Sheets –> Stylelint``` (ошибки будут исправлены автоматически при сохранении файла)
-* ```yarn run lint:style --fix``` – исправить ошибки в SCSS-файлах (если это возможно)
+* ```yarn run lint:style --fix``` – исправить ошибки в SCSS-файлах
 * ```yarn run lint:script``` – проверить JS-файлы
 * ```yarn run lint:script --fix``` – исправить ошибки в JS-файлах
 * ```yarn run dev``` – запуск сервера для разработки проекта
@@ -192,28 +191,32 @@ entry: {
 }
 ```
 **Результат**
-```css
+```scss
 .items {
+    margin-right: -15px;
+    margin-left: -15px;
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
 }
+
 .items .item {
     box-sizing: border-box;
-    margin-left: 15px;
-    margin-right: 15px;
-    word-wrap: break-word;
     width: calc(100% / 12 * 3 - 30px);
+    margin-right: 15px;
+    margin-left: 15px;
+    word-wrap: break-word;
 }
+
 @media screen and (max-width: 992px) {
     .items {
         justify-content: center;
     }
+
     .items .item {
         width: calc(100% / 12 * 5 - 30px);
     }
 }
+
 @media screen and (max-width: 576px) {
     .items .item {
         width: calc(100% / 12 * 10 - 30px);

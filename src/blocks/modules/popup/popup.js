@@ -1,20 +1,29 @@
-/* eslint-disable no-restricted-syntax */
 /* eslint-disable consistent-return */
-import disableScroll from 'disable-scroll';
 import anime from 'animejs';
 
-class Fade {
+export default class Fade {
     constructor(el) {
         this.el = document.querySelector(el);
         this.flag = false;
     }
 
     fadeIn(delay, display) {
-        disableScroll.on();
         let { flag } = this;
-        flag = true;
+
         const { el } = this;
+        const scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+
+        flag = true;
+        document.body.style.margin = `0px ${scrollBarWidth}px 0px 0px`;
+        document.body.style.overflow = 'hidden';
+
         if (flag !== false) {
+            const popups = document.querySelectorAll('.popup');
+
+            popups.forEach(e => {
+                e.style.display = 'none';
+            });
+
             anime({
                 targets: el,
                 opacity: 1,
@@ -33,7 +42,6 @@ class Fade {
     }
 
     fadeOut(delay) {
-        disableScroll.off();
         let { flag } = this;
         flag = true;
         const { el } = this;
@@ -46,6 +54,8 @@ class Fade {
                 complete() {
                     flag = false;
                     el.style.display = 'none';
+                    document.body.style.margin = '';
+                    document.body.style.overflow = '';
                 },
             });
         } else {
@@ -54,45 +64,77 @@ class Fade {
     }
 }
 
-const userPopupLogin = new Fade('.popup--user');
-const userPopupRegister = new Fade('.popup--user-register');
+const overlay = document.querySelector('.overlay');
 const overlayFade = new Fade('.overlay');
 
-const overlay = document.querySelector('.overlay');
-const userButtonsLogin = document.querySelectorAll('.button-user');
-const userButtonRegister = document.querySelector('.button-user-register');
-const userButtonsClose = document.querySelectorAll('.popup__close-user');
+const registerButtons = document.querySelectorAll('.button-register');
+const registerButtonsClose = document.querySelectorAll('.popup__close--login');
+const registerPopup = new Fade('.popup--register');
 
-if (userButtonsLogin) {
-    for (const button of userButtonsLogin) {
-        button.addEventListener('click', () => {
+if (registerButtons) {
+    registerButtons.forEach(button => {
+        button.addEventListener('click', e => {
+            e.preventDefault();
             overlayFade.fadeIn(350, 'block');
-            userPopupRegister.fadeOut(250);
-            userPopupLogin.fadeIn(350, 'flex');
+            registerPopup.fadeIn(350, 'flex');
         });
-    }
-}
-
-if (userButtonRegister) {
-    userButtonRegister.addEventListener('click', () => {
-        userPopupLogin.fadeOut(250);
-        userPopupRegister.fadeIn(350, 'flex');
     });
 }
+
 if (overlay) {
     overlay.addEventListener('click', () => {
         overlayFade.fadeOut(350);
-        userPopupLogin.fadeOut(350);
-        userPopupRegister.fadeOut(350);
+        registerPopup.fadeOut(350);
+    });
+
+    for (let i = 0; i < overlay.childNodes.length; i++) {
+        overlay.childNodes[i].addEventListener('click', event => {
+            event.stopPropagation();
+        });
+    }
+}
+
+if (registerButtonsClose) {
+    registerButtonsClose.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeOut(250);
+            registerPopup.fadeOut(250);
+        });
     });
 }
 
-if (userButtonsClose) {
-    for (const button of userButtonsClose) {
-        button.addEventListener('click', () => {
-            overlayFade.fadeOut(250);
-            userPopupLogin.fadeOut(250);
-            userPopupRegister.fadeOut(250);
+const successButtons = document.querySelectorAll('.button-success');
+const successButtonsClose = document.querySelectorAll('.popup__close--success');
+const successPopup = new Fade('.popup--success');
+
+if (successButtons) {
+    successButtons.forEach(button => {
+        button.addEventListener('click', e => {
+            e.preventDefault();
+            overlayFade.fadeIn(350, 'block');
+            successPopup.fadeIn(350, 'flex');
+        });
+    });
+}
+
+if (overlay) {
+    overlay.addEventListener('click', () => {
+        overlayFade.fadeOut(350);
+        successPopup.fadeOut(350);
+    });
+
+    for (let i = 0; i < overlay.childNodes.length; i++) {
+        overlay.childNodes[i].addEventListener('click', event => {
+            event.stopPropagation();
         });
     }
+}
+
+if (successButtonsClose) {
+    successButtonsClose.forEach(button => {
+        button.addEventListener('click', () => {
+            overlayFade.fadeOut(250);
+            successPopup.fadeOut(250);
+        });
+    });
 }

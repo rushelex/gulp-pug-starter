@@ -1,42 +1,110 @@
-.popup.popup--user
-    .popup__wrapper
-        button.popup__close.button.popup__close-user
-            +icon('close', 'close-mode')
-        include ../form/form
-        +form('Вход','form',[
-            {
-                'label' : 'Логин',
-                'name' : 'login',
-                'type' : 'text',
-            },
-            {
-                'label' : 'Пароль',
-                'name' : 'password',
-                'type' : 'password',
-            }],
-            {
-                'p' : 'Если у вас нет аккаунта вы можете' ,
-                'button' : 'Зарегистрироваться',
-                'name' : 'button-user-register',
-            },
-            {
-                'text' : 'Запомнить на этом компьютере',
-                'name' : 'remember'
-            },
-            'Войти'
-        )
-.popup.popup--user-register
-    .popup__wrapper
-        button.popup__close.button.popup__close-user
-            +icon('close', '')
-        include ../form/form
-        +form('Регистрация','form-alert','Для регистрации обратитесь к вашему менеджеру по телефону +7 (495) 795-16-80',
-            {
-                'p' : 'Если у вас уже есть аккаунта' ,
-                'button' : 'Войти',
-                'name' : 'button-user',
-            },
-            '',
-            'Хорошо'
-        )
+include ../form/form
+
 .overlay
+    .popup.popup--register
+        .popup__wrapper
+            button.popup__close.popup__close--login
+                +icon('close', '')
+            +form('Зарегистрируйтесь','form',[
+                {
+                    'label' : 'Имя',
+                    'type' : 'name',
+                    'name' : 'popup',
+                    'id' : 'name',
+                    'value' : '',
+                    'placeholder' : 'Введите ваше имя',
+                    'require' : 'true',
+                    'alert' : 'Введите имя'
+                },
+                {
+                    'label' : 'Телефон',
+                    'type' : 'tel',
+                    'name' : 'popup',
+                    'id' : 'tel',
+                    'value' : '',
+                    'placeholder' : '+7 (___) ___-__-__',
+                    'require' : 'true',
+                    'alert' : 'Введите телефон'
+                },
+                {
+                    'label' : 'Почта',
+                    'type' : 'email',
+                    'name' : 'popup',
+                    'id' : 'email',
+                    'value' : '',
+                    'placeholder' : 'Введите e-mail',
+                    'require' : 'true',
+                    'alert' : 'Введите почту'
+                },
+                {
+                    'label' : 'Пароль',
+                    'type' : 'password',
+                    'name' : 'popup',
+                    'id' : 'password',
+                    'value' : '',
+                    'placeholder' : 'Введите пароль',
+                    'require' : 'true',
+                    'alert' : 'Введите пароль'
+                },
+                {
+                    'label' : 'Радио-1',
+                    'type' : 'radio',
+                    'name' : 'popup-radio',
+                    'id' : '1',
+                    'value' : 'radio-1',
+                    'checked' : '',
+                    'icon' : ''
+                },
+                {
+                    'label' : 'Радио-2',
+                    'type' : 'radio',
+                    'name' : 'popup-radio',
+                    'id' : '2',
+                    'value' : 'radio-2',
+                    'checked' : 'true',
+                    'icon' : ''
+                },
+                {
+                    'label' : 'Радио-3',
+                    'type' : 'radio',
+                    'name' : 'popup-radio',
+                    'id' : '3',
+                    'value' : 'radio-3',
+                    'checked' : 'true',
+                    'icon' : ''
+                },
+                {
+                    'label' : 'Поле ввода',
+                    'type' : 'textarea',
+                    'name' : 'popup-textarea',
+                    'id' : 'message',
+                    'placeholder' : 'Ваше сообщение',
+                    'require' : 'true'
+                },
+                {
+                    'label' : 'Файл',
+                    'type' : 'file',
+                    'name' : 'popup-file',
+                    'id' : 'file'
+                }],
+                {
+                    'p': 'Какой-то текст',
+                    'name': 'button-success',
+                    'button': 'Открыть второе окно'
+                },
+                {
+                    'text': 'Какой-то текст',
+                    'name': 'popup-checkbox',
+                    'id': '1',
+                    'link': {
+                        'href': '#',
+                        'title': 'Ссылка'
+                    }
+                },
+                'Отправить'
+            )
+    .popup.popup--success
+        .popup__wrapper
+            button.popup__close.popup__close--success
+                +icon('close', '')
+            h1 Успешно!

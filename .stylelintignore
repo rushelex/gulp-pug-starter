@@ -1,2 +1,1 @@
-/src/styles/base/*.scss
-/src/styles/vendor/import/*.scss
+/src/styles/**/*.scss

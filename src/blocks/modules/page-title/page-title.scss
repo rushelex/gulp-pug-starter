@@ -1,12 +1,22 @@
 .page-title {
-    color: #000000;
+    color: #000;
+
+    .breadcrumbs {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        opacity: 0.5;
+    }
+
+    &__content {
+        margin-bottom: 40px;
+    }
 
     &--with-bg {
         position: relative;
         margin-bottom: 60px;
         padding-bottom: 130px;
         text-align: center;
-        color: #ffffff;
+        color: #fff;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -37,15 +47,5 @@
             position: relative;
             z-index: 1;
         }
-    }
-
-    &__content {
-        margin-bottom: 40px;
-    }
-
-    .breadcrumbs {
-        padding-top: 20px;
-        padding-bottom: 10px;
-        opacity: 0.5;
     }
 }
