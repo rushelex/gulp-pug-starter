@@ -1,1 +1,17 @@
-h3 Page not found
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Страница нот фаунд | gulp-pug-starter"
+
+block content
+  include ../../blocks/modules/header/header
+  main
+    .page
+      h1 Айм сорри, бат страница нот фаунд
+  include ../../blocks/modules/footer/footer
+  include ../../blocks/modules/popup/popup
+
+block scripts
+  script(src="js/vendor.js")
+  script(src="js/main.js")

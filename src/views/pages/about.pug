@@ -2,16 +2,16 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-    - const title = "О шаблоне | gulp-pug-starter"
+  - const title = "О шаблоне | gulp-pug-starter"
 
 block content
-    include ../../blocks/modules/header/header
-    main
-        .page
-            h1 Hello, about page!
-    include ../../blocks/modules/footer/footer
-    include ../../blocks/modules/popup/popup
+  include ../../blocks/modules/header/header
+  main
+    .page
+      h1 Hello, about page!
+  include ../../blocks/modules/footer/footer
+  include ../../blocks/modules/popup/popup
 
 block scripts
-    script(src="js/vendor.js")
-    script(src="js/main.js")
+  script(src="js/vendor.js")
+  script(src="js/main.js")

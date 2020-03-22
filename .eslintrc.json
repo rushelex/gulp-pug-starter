@@ -1,41 +1,41 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
-    },
-    "extends": [
-        "airbnb/base",
-        "prettier"
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb/base",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      "error", 2
     ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
-    },
-    "rules": {
-        "indent": [
-            "error", 4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "warn",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "class-methods-use-this": "warn",
-        "no-unused-vars": "warn",
-        "no-plusplus": "off",
-        "no-new": "off"
-    },
-    "plugins": [
-        "prettier"
-    ]
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "class-methods-use-this": "warn",
+    "no-unused-vars": "warn",
+    "no-plusplus": "off",
+    "no-new": "off"
+  },
+  "plugins": [
+    "prettier"
+  ]
 }

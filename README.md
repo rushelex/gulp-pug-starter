@@ -179,48 +179,48 @@ entry: {
 **SCSS**
 ```scss
 .items {
-    @include row-flex();
-    @include md(justify-content, center);
+  @include row-flex;
+  @include md(justify-content, center);
 
-    .item {
-        @include col();
-        @include size(3);
-        @include size-md(5);
-        @include size-xs(10);
-    }
+  .item {
+    @include col;
+    @include size(3);
+    @include size-md(5);
+    @include size-xs(10);
+  }
 }
 ```
 **Результат**
 ```scss
 .items {
-    margin-right: -15px;
-    margin-left: -15px;
-    display: flex;
-    flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .items .item {
-    box-sizing: border-box;
-    width: calc(100% / 12 * 3 - 30px);
-    margin-right: 15px;
-    margin-left: 15px;
-    word-wrap: break-word;
+  box-sizing: border-box;
+  width: calc(100% / 12 * 3 - 30px);
+  margin-right: 15px;
+  margin-left: 15px;
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 992px) {
-    .items {
-        justify-content: center;
-    }
+  .items {
+    justify-content: center;
+  }
 
-    .items .item {
-        width: calc(100% / 12 * 5 - 30px);
-    }
+  .items .item {
+    width: calc(100% / 12 * 5 - 30px);
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .items .item {
-        width: calc(100% / 12 * 10 - 30px);
-    }
+  .items .item {
+    width: calc(100% / 12 * 10 - 30px);
+  }
 }
 ```
 

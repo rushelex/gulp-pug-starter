@@ -1,22 +1,21 @@
 // FONT
-$fontFamilyMain: "Montserrat", sans-serif;
-$fontFamilySecondary: "Roboto", sans-serif;
+$fontFamilySansSerif: "Mont", sans-serif;
+$fontFamilySerif: "PlayfairDisplay", sans-serif;
 $fontSizeMain: 16px;
 $fontWeightMain: 400;
 $fontLineHeightMain: 150%;
 
 // COLOR
-
 $colorMain: #444ce0;
 $colorSuccess: #26de81;
 $colorDanger: #fc5c65;
 $colorWarning: #fed330;
-$colorLight: #999;
+$colorLight: #999999;
 $colorPurple: #8854d0;
 
 // MEDIA
-$desktopWidth: 1200px;
-$smDesktopWidth: 992px;
-$tableWidth: 768px;
-$phoneWidth: 480px;
-$smPhoneWidth: 320px;
+$xlWidth: 1200px;
+$lgWidth: 992px;
+$mdWidth: 768px;
+$smWidth: 480px;
+$xsWidth: 320px;

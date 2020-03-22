@@ -5,221 +5,156 @@ block variables
     - const title = "Главная | gulp-pug-starter"
 
 block content
-    include ../blocks/modules/header/header
-    main
-        .page
-            .container
-                .row.section-offset
-                    .col
-                        h1 &lt;h1&gt; Hello, world!
-                        h2 &lt;h2&gt; Это стартовый шаблон для разработки сайта.
-                        h3 &lt;h3&gt; Здесь используются мои собственные наработки, а также компоненты, взятые из стороних источников.
-                        h4 &lt;h4&gt; Lorem ipsum dolor sit.
-                        h5 &lt;h5&gt; Lorem ipsum dolor sit amet.
-                        h6 &lt;h6&gt; Lorem ipsum dolor sit amet consectetur.
-                        p &lt;p&gt; Привет! Как тебе этот текст, в котором я не знаю что написать и поэтому придумал свой лорем ипсум? Этот текст на экране должен выглядеть красиво.
-                        br
-                        p Неупорядоченный список:
-                        ul
-                            li
-                                span Элемент списка
-                            li
-                                span Элемент списка
-                            li
-                                span Элемент списка
-                        br
-                        p Упорядоченный список:
-                        ol
-                            li
-                                span Элемент списка
-                            li
-                                span Элемент списка
-                            li
-                                span Элемент списка
-                .row.row--center.section-offset
-                    .col.col-6.col--center
-                        a(href="./about.html").link
-                            span &lt;a&gt; - ссылка
-                        button.link
-                            span &lt;button&gt; - ссылка
-                .row.row--center.section-offset
-                    .col.col-6.col--center
-                        a(href="./about.html").button.button--action
-                            span &lt;a&gt; - кнопка
-                        button.button.button--action
-                            span &lt;button&gt; - кнопка
-                .row.row--center.section-offset
-                    .col.col-6.col--center
-                        a(href="#form").button.button--action
-                            span &lt;a&gt; - якорь
-                .row.row--center.section-offset
-                    .col.col-6.col--center
-                        button.button.button--action.button-register
-                            span &lt;button&gt; - модальное окно
-                .row.section-offset
-                    .col.col-0
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-12
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-1
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-11
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-2
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-10
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-3
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-9
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-4
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-8
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-5
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-7
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-6
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-6
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-7
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-5
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-8
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-4
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-9
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-3
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-10
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-2
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-11
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-1
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col.col-12
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                    .col.col-0
-                        .test(style="background-color: #777777; width: 100%; height: 30px; border-radius: 5px;")
-                .row.section-offset
-                    .col#form
-                        include ../blocks/modules/form/form
-                        +form('Зарегистрируйтесь','form',[
-                            {
-                                'label' : 'Имя',
-                                'type' : 'name',
-                                'name' : 'register',
-                                'id' : 'name',
-                                'value' : '',
-                                'placeholder' : 'Введите ваше имя',
-                                'require' : 'true',
-                                'alert' : 'Введите имя'
-                            },
-                            {
-                                'label' : 'Телефон',
-                                'type' : 'tel',
-                                'name' : 'register',
-                                'id' : 'tel',
-                                'value' : '',
-                                'placeholder' : '+7 (___) ___-__-__',
-                                'require' : 'true',
-                                'alert' : 'Введите телефон'
-                            },
-                            {
-                                'label' : 'Почта',
-                                'type' : 'email',
-                                'name' : 'register',
-                                'id' : 'email',
-                                'value' : '',
-                                'placeholder' : 'Введите e-mail',
-                                'require' : 'true',
-                                'alert' : 'Введите почту'
-                            },
-                            {
-                                'label' : 'Пароль',
-                                'type' : 'password',
-                                'name' : 'register',
-                                'id' : 'password',
-                                'value' : '',
-                                'placeholder' : 'Введите пароль',
-                                'require' : 'true',
-                                'alert' : 'Введите пароль'
-                            },
-                            {
-                                'label' : 'Радио-1',
-                                'type' : 'radio',
-                                'name' : 'radio',
-                                'id' : '1',
-                                'value' : 'radio-1',
-                                'checked' : '',
-                                'icon' : ''
-                            },
-                            {
-                                'label' : 'Радио-2',
-                                'type' : 'radio',
-                                'name' : 'radio',
-                                'id' : '2',
-                                'value' : 'radio-2',
-                                'checked' : 'true',
-                                'icon' : ''
-                            },
-                            {
-                                'label' : 'Радио-3',
-                                'type' : 'radio',
-                                'name' : 'radio',
-                                'id' : '3',
-                                'value' : 'radio-3',
-                                'checked' : 'true',
-                                'icon' : ''
-                            },
-                            {
-                                'label' : 'Поле ввода',
-                                'type' : 'textarea',
-                                'name' : 'textarea',
-                                'id' : 'message',
-                                'placeholder' : 'Ваше сообщение',
-                                'require' : 'true'
-                            },
-                            {
-                                'label' : 'Файл',
-                                'type' : 'file',
-                                'id' : 'file'
-                            }],
-                            '',
-                            {
-                                'text': 'Какой-то текст',
-                                'name': 'checkbox',
-                                'id': '1',
-                                'link': {
-                                    'href': '#',
-                                    'title': 'Ссылка'
-                                }
-                            },
-                            'Кнопка "Отправить" с длинным текстом'
-                        )
-    include ../blocks/modules/footer/footer
-    include ../blocks/modules/popup/popup
+  include ../blocks/modules/header/header
+  main
+    .page
+      .container
+        .row.section-offset
+          .col
+            h1 &lt;h1&gt; Hello, world!
+            h2 &lt;h2&gt; Это стартовый шаблон для разработки сайта.
+            h3 &lt;h3&gt; Здесь используются мои собственные наработки, а также компоненты, взятые из стороних источников.
+            h4 &lt;h4&gt; Lorem ipsum dolor sit.
+            h5 &lt;h5&gt; Lorem ipsum dolor sit amet.
+            h6 &lt;h6&gt; Lorem ipsum dolor sit amet consectetur.
+            p &lt;p&gt; Привет! Как тебе этот текст, в котором я не знаю что написать и поэтому придумал свой лорем ипсум? Этот текст на экране должен выглядеть красиво.
+            br
+            p Неупорядоченный список:
+            ul
+              li
+                span Элемент списка
+              li
+                span Элемент списка
+              li
+                span Элемент списка
+            br
+            p Упорядоченный список:
+            ol
+              li
+                span Элемент списка
+              li
+                span Элемент списка
+              li
+                span Элемент списка
+        .row.row--center.section-offset
+          .col.col-6.col--center
+            a(href="./about.html").link
+              span &lt;a&gt; - ссылка
+            button.link
+              span &lt;button&gt; - ссылка
+        .row.row--center.section-offset
+          .col.col-6.col--center
+            a(href="./about.html").button.button--action
+              span &lt;a&gt; - кнопка
+            button.button.button--action
+              span &lt;button&gt; - кнопка
+        .row.row--center.section-offset
+          .col.col-6.col--center
+            a(href="#form").button.button--action
+              span &lt;a&gt; - якорь
+        .row.row--center.section-offset
+          .col.col-6.col--center
+            button.button.button--action.button-register
+              span &lt;button&gt; - модальное окно
+        .row.section-offset
+          .col#form
+            include ../blocks/modules/form/form
+            +form('Зарегистрируйтесь','form',[
+              {
+                'label' : 'Имя',
+                'type' : 'name',
+                'name' : 'register',
+                'id' : 'name',
+                'value' : '',
+                'placeholder' : 'Введите ваше имя',
+                'require' : 'true',
+                'alert' : 'Введите имя'
+              },
+              {
+                'label' : 'Телефон',
+                'type' : 'tel',
+                'name' : 'register',
+                'id' : 'tel',
+                'value' : '',
+                'placeholder' : '+7 (___) ___-__-__',
+                'require' : 'true',
+                'alert' : 'Введите телефон'
+              },
+              {
+                'label' : 'Почта',
+                'type' : 'email',
+                'name' : 'register',
+                'id' : 'email',
+                'value' : '',
+                'placeholder' : 'Введите e-mail',
+                'require' : 'true',
+                'alert' : 'Введите почту'
+              },
+              {
+                'label' : 'Пароль',
+                'type' : 'password',
+                'name' : 'register',
+                'id' : 'password',
+                'value' : '',
+                'placeholder' : 'Введите пароль',
+                'require' : 'true',
+                'alert' : 'Введите пароль'
+              },
+              {
+                'label' : 'Радио-1',
+                'type' : 'radio',
+                'name' : 'radio',
+                'id' : '1',
+                'value' : 'radio-1',
+                'checked' : '',
+                'icon' : ''
+              },
+              {
+                'label' : 'Радио-2',
+                'type' : 'radio',
+                'name' : 'radio',
+                'id' : '2',
+                'value' : 'radio-2',
+                'checked' : 'true',
+                'icon' : ''
+              },
+              {
+                'label' : 'Радио-3',
+                'type' : 'radio',
+                'name' : 'radio',
+                'id' : '3',
+                'value' : 'radio-3',
+                'checked' : 'true',
+                'icon' : ''
+              },
+              {
+                'label' : 'Поле ввода',
+                'type' : 'textarea',
+                'name' : 'textarea',
+                'id' : 'message',
+                'placeholder' : 'Ваше сообщение',
+                'require' : 'true'
+              },
+              {
+                'label' : 'Файл',
+                'type' : 'file',
+                'id' : 'file'
+              }],
+              '',
+              {
+                'text': 'Какой-то текст',
+                'name': 'checkbox',
+                'id': '1',
+                'link': {
+                  'href': '#',
+                  'title': 'Ссылка'
+                }
+              },
+              'Кнопка "Отправить" с длинным текстом'
+            )
+  include ../blocks/modules/footer/footer
+  include ../blocks/modules/popup/popup
 
 block scripts
-    script(src="js/vendor.js")
-    script(src="js/main.js")
+  script(src="js/vendor.js")
+  script(src="js/main.js")
